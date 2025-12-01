@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enter Password to Continue</title>
+  <style>
+    /* Base styling adapted from WebEmulatorJS */
+    html, body {
+      height: 100%;
+      background-color: black;
+      color: white;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: monospace;
+    }
+
+    .box {
+      background-color: #333;
+      border: 2px solid #555;
+      border-radius: 0.4em;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+      width: 25em;
+      max-width: 90%;
+      text-align: center;
+      padding: 2em;
+      transition-duration: 0.2s;
+      color: #aaa;
+    }
+
+    .box:hover {
+      border-color: #38f;
+      color: #ddd;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: white;
+      text-shadow: 0 0 5px #38f;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 0.6em;
+      margin: 1em 0;
+      font-size: 16px;
+      font-family: monospace;
+      font-weight: bold;
+      background-color: #222;
+      color: #ddd;
+      border: 1px solid #555;
+      border-radius: 0.4em;
+      box-sizing: border-box;
+      transition: 0.2s;
+    }
+
+    input[type="password"]:focus {
+      outline: none;
+      border-color: #38f;
+      box-shadow: 0 0 5px #38f;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.6em;
+      font-size: 16px;
+      font-family: monospace;
+      font-weight: bold;
+      background-color: #444;
+      color: #aaa;
+      border: 1px solid #555;
+      border-radius: 0.4em;
+      cursor: pointer;
+      transition-duration: 0.2s;
+    }
+
+    button:hover {
+      background-color: #666;
+      color: #ddd;
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    #msg {
+      color: #f55;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h3>Enter Password to Continue</h3>
+    <form id="pwForm" autocomplete="off" novalidate>
+      <input id="pw" type="password" placeholder="Password" aria-label="Password" required />
+      <button type="submit">Continue</button>
+    </form>
+    <div id="msg"></div>
+  </div>
+
+  <script>
+    (function () {
+      const pass = 'cuphead2025';
+      const form = document.getElementById('pwForm');
+      const pwEl = document.getElementById('pw');
+      const msg = document.getElementById('msg');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const entered = pwEl.value || '';
+        if (entered === pass.toUpperCase()) {
+          window.location.href = 'main5883583458345736846836735866396396387237212711273185969339453ghgh34g34g3ghdw8fh8345u34757342fddsfehrt425.html';
+        } else {
+          msg.textContent = 'Incorrect password — please try again.';
+          pwEl.value = '';
+          pwEl.focus();
+        }
+      });
+
+      pwEl.focus();
+    })();
+  </script>
+</body>
+</html>
